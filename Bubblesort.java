@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class Arraysdemo {
+public class Bubblesort {
     public static void main(String[] args) {
         int[] a = {5, 3, 8, 4, 2};
         System.out.println(Arrays.toString(a));
