@@ -1,0 +1,27 @@
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        // Step 1: Convert both arrays to sets
+        Set<Integer> set1 = new HashSet<>();
+        for (int n : nums1) {
+            set1.add(n);
+        }
+
+        Set<Integer> result = new HashSet<>();
+
+        // Step 2: Check common numbers
+        for (int n : nums2) {
+            if (set1.contains(n)) {
+                result.add(n); // add only unique numbers
+            }
+        }
+
+        // Step 3: Convert result set to array
+        int[] ans = new int[result.size()];
+        int i = 0;
+        for (int n : result) {
+            ans[i++] = n;
+        }
+
+        return ans;
+    }
+}
